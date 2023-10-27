@@ -15,14 +15,14 @@ pipeline {
         stage('Docker build') {
             steps {
                 script {
-                    sh 'docker build'
+                    sh 'echo build'
                 }
             }
         }
         stage('Deploy') {
             steps {
                 script {
-                    sh 'deploy'
+                    sh 'echo deploy'
                 }
             }
         }
