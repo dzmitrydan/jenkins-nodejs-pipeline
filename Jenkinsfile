@@ -17,6 +17,7 @@ pipeline {
         stage('Docker build') {
             steps {
                 script {
+                    sh 'docker -v'
                     sh 'docker build -t nodemain:v1.0 .'
                 }
             }
