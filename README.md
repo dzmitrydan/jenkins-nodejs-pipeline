@@ -28,6 +28,9 @@ To install the latest version, run:
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+```
+sudo service docker status
+```
 
 ### 2. Configure Docker Host with Remote API
 ```
@@ -48,7 +51,11 @@ curl http://localhost:4243/version
 ```
 
 ### 3. Configure Jenkins Server with Docker plug-in
-`jenkins-agent`
-`tcp://docker_host_dns:4243`
+`docker-agent`
+`tcp://docker_host_dns:4243` -> `tcp://ec2-13-51-193-237.eu-north-1.compute.amazonaws.com:4243`
+
+```
+curl http://ec2-13-51-193-237.eu-north-1.compute.amazonaws.com:4243/version
+```
 
 

@@ -1,6 +1,6 @@
 pipeline {
     #agent any
-    agent {label "docker-build-node"}
+    agent {label "docker-agent"}
     tools {nodejs "node"}
     stages {
         stage('Build') {
@@ -18,8 +18,10 @@ pipeline {
         stage('Docker build') {
             steps {
                 script {
+                    sh 'echo "Docker build"'
                     sh 'docker -v'
-                    sh 'docker build -t nodemain:v1.0 .'
+                    sh 'sudo service docker status'
+                    #sh 'docker build -t nodemain:v1.0 .'
                 }
             }
         }
@@ -27,6 +29,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo deploy'
+                    sh 'curl http://ec2-13-51-193-237.eu-north-1.compute.amazonaws.com:4243/version'
                 }
             }
         }
