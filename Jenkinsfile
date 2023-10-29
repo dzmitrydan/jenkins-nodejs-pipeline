@@ -1,5 +1,5 @@
 pipeline {
-    #agent any
+    //agent any
     agent {label "docker-agent"}
     tools {nodejs "node"}
     stages {
@@ -21,7 +21,7 @@ pipeline {
                     sh 'echo "Docker build"'
                     sh 'docker -v'
                     sh 'sudo service docker status'
-                    #sh 'docker build -t nodemain:v1.0 .'
+                    //sh 'docker build -t nodemain:v1.0 .'
                 }
             }
         }
