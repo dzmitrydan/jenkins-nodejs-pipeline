@@ -1,18 +1,12 @@
 pipeline {
-    agent any
-    tools {nodejs "nodejs"}
-    stages {
-        stage('Build') {
-            steps {
-                sh 'node -v'
-                sh 'npm -v'
-                sh 'npm install'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
+  agent {
+    docker { image 'node:20.9.0-alpine' }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'node --version'
+      }
     }
+  }
 }
