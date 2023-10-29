@@ -1,7 +1,7 @@
 pipeline {
     //agent any
     agent {label "docker-agent"}
-    tools {nodejs "node"}
+    tools {nodejs "nodejs"}
     stages {
         stage('Build') {
             steps {
