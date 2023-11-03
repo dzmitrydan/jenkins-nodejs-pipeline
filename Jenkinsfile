@@ -3,6 +3,7 @@ pipeline {
     tools {nodejs "node"}
     stages {
         stage('Build') {
+            agent any
             steps {
                 sh 'npm install'
             }
