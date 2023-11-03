@@ -17,10 +17,20 @@ Installed Jenkins plugins:
 - NodeJs plugin
 - Pipeline
 
+![Web screenshot](readme-assets/docker-1.png)
+![Web screenshot](readme-assets/jenkins-1.png)
+
 #### Multibranch Jenkins pipeline settings
-![Pipeline screenshot](readme-assets/jenkins-multibranch-pipeline-1.png)
-![Pipeline screenshot](readme-assets/jenkins-multibranch-pipeline-2.png)
+![Pipeline screenshot](readme-assets/cd-1.png)
+![Pipeline screenshot](readme-assets/cd-2.png)
+![Pipeline screenshot](readme-assets/cd-3.png)
+![Pipeline screenshot](readme-assets/cd-4.png)
+![Pipeline screenshot](readme-assets/cd-5.png)
+![Web screenshot](readme-assets/web-1.png)
 
 #### Regular Jenkins pipeline setting
-![Pipeline screenshot](readme-assets/jenkins-regular-pipeline-1.png)
-![Pipeline screenshot](readme-assets/jenkins-regular-pipeline-2.png)
+![Pipeline screenshot](readme-assets/cd-deploy-manual-1.png)
+![Pipeline screenshot](readme-assets/cd-deploy-manual-2.png)
+![Pipeline screenshot](readme-assets/cd-deploy-manual-3.png)
+![Pipeline screenshot](readme-assets/cd-deploy-manual-4.png)
+![Web screenshot](readme-assets/web-2.png)
