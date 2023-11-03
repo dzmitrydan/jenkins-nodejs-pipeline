@@ -1,13 +1,18 @@
 pipeline {
-    agent none
-    tools {nodejs "node"}
+    agent {
+        docker {
+            image 'node:7.8.0'
+        }
+    }
     stages {
         stage('Build') {
+
             steps {
                 sh 'npm install'
             }
         }
         stage('Test') {
+
             steps {
                 sh 'npm test'
             }
@@ -21,9 +26,10 @@ pipeline {
             }
         }
         stage('Deploy') {
+            agent any
             steps {
                 script {
-                    sh 'docker run -d --expose 3001 -p 3001:3000 nodedev:v1.0'
+                    sh 'docker run -d --expose 3000 -p 3000:3000 --rm --name nodedev nodedev:v1.0'
                 }
             }
         }
