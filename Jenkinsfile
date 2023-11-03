@@ -1,8 +1,12 @@
 pipeline {
-    agent any
-    tools {nodejs "node"}
+    agent none
     stages {
         stage('Build') {
+            agent {
+                docker {
+                    image 'node:latest'
+                }
+            }
             steps {
                 sh 'npm install'
             }
