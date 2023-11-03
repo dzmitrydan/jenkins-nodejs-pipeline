@@ -33,7 +33,7 @@ pipeline {
             agent any
             steps {
                 script {
-                    sh 'docker run -d --expose 3000 -p 3000:3000 nodemain:v1.0'
+                    sh 'docker run -d --expose 3000 -p 3000:3000 --rm --name nodemain nodemain:v1.0'
                 }
             }
         }
