@@ -25,7 +25,7 @@ pipeline {
             agent any
             steps {
                 script {
-                    sh 'docker build -t nodedev:v1.0 .'
+                    sh 'docker build -t nodedev${IMAGE_TAG} .'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
             agent any
             steps {
                 script {
-                    sh 'docker run -d --expose 3001 -p 3001:3000 --rm --name nodedev nodedev:v1.0'
+                    sh 'docker run -d --expose 3001 -p 3001:3000 --rm --name nodedev nodedev${IMAGE_TAG}'
                 }
             }
         }
