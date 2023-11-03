@@ -12,6 +12,11 @@ pipeline {
             }
         }
         stage('Test') {
+            agent {
+                docker {
+                    image 'node:7.8.0'
+                }
+            }
             steps {
                 sh 'npm test'
             }
@@ -25,6 +30,7 @@ pipeline {
             }
         }
         stage('Deploy') {
+            agent any
             steps {
                 script {
                     sh 'docker run -d --expose 3000 -p 3000:3000 nodemain:v1.0'
