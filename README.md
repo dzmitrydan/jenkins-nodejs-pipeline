@@ -26,11 +26,11 @@ Installed Jenkins plugins:
 ![Pipeline screenshot](readme-assets/cd-3.png)
 ![Pipeline screenshot](readme-assets/cd-4.png)
 ![Pipeline screenshot](readme-assets/cd-5.png)
-![Web screenshot](readme-assets/web-1.png)
+[<img src="readme-assets/web-1.png" width="250" />](readme-assets/web-1.png.png)
 
 #### Regular Jenkins pipeline setting
 ![Pipeline screenshot](readme-assets/cd-deploy-manual-1.png)
 ![Pipeline screenshot](readme-assets/cd-deploy-manual-2.png)
 ![Pipeline screenshot](readme-assets/cd-deploy-manual-3.png)
 ![Pipeline screenshot](readme-assets/cd-deploy-manual-4.png)
-![Web screenshot](readme-assets/web-2.png)
+[<img src="readme-assets/web-2.png" width="250" />](readme-assets/web-2.png.png)
